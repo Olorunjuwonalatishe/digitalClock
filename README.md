@@ -1,1 +1,1 @@
-didgitalclock
+digitalclock
