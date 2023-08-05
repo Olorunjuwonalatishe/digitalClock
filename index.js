@@ -2,37 +2,37 @@ function startTime() {
  let hours = document.querySelector("#hours") 
  let minutes = document.querySelector("#minutes")
  let seconds = document.querySelector("#seconds") 
- let hour = parseInt(hours.textContent)
+ let hour = hours.innerHTML
 
  let time = new Date()
 
- hours.textContent = time.getHours()
- minutes.textContent = time.getMinutes()
- seconds.textContent = time.getSeconds()
+ hours.innerHTML = time.getHours()
+ minutes.innerHTML = time.getMinutes()
+ seconds.innerHTML = time.getSeconds()
 
  let meridian = document.querySelector("#meridian")
  if (hour >= 12) {
-    meridian.textContent = "PM"
+    meridian.innerHTML = "PM"
  }
 
  
- if (minutes.textContent < 10) {
+ if (minutes.innerHTML < 10) {
     
-    minutes.textContent = "0" + minutes.textContent
+    minutes.innerHTML = "0" + minutes.innerHTML
    }
    
-   if (seconds.textContent< 10) {
-      seconds.textContent = "0" + seconds.textContent
+   if (seconds.innerHTML< 10) {
+      seconds.innerHTML = "0" + seconds.innerHTML
    }
    
-   if (hours.textContent < 10) {
-      hours.textContent = "0" + hours.textContent
+   if (hour < 10) {
+      hours.innerHTML = "0" + hours.innerHTML
       
    }
-   if (hours > 12) {
-      hours = hour - 12
-      hours.textContent = hours
+   if (hour > 12) {
+      hour = hour - 12
+      hours.innerHTML = hour
    }
 }
 
-setInterval(startTime, 1000)
+setInterval(startTime, 100)
