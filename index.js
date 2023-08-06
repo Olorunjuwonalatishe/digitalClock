@@ -26,12 +26,12 @@ function startTime() {
    }
    
    if (hour < 10) {
-      hours.innerHTML = "0" + hours.innerHTML
+      hours = "0" + hours.innerHTML
       
    }
    if (hour > 12) {
       hour = hour - 12
-      hours.innerHTML = hour
+      hours = hours.innerHTML
    }
 }
 
